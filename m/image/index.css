@@ -1,0 +1,72 @@
+/* CSS Document */
+body {font:14px/1.5 Microsoft YaHei,\5b8b\4f53; color:#333333; background-color:#f4f4f4;}
+* { margin:0; padding:0;}
+a { color:#333333; text-decoration:none;}
+a:hover { color:#D70000; text-decoration:none; cursor:pointer;}
+img { border:0;} 
+.clear{ clear:both;}
+ul{ list-style-type:none}
+li{ display:inline}
+li a{ font-size:12px}
+a {outline: none;}
+a:active {star:expression(this.onFocus=this.blur());}
+:focus { outline:0; }
+html{overflow-x:hidden;overflow-y:scroll}
+/*-------------------------------------------------------------------top------------------------------------------------------------*/
+nav{ width:100%; background:#07a989; background-size:1px 51px; text-align:center; font-size:20px; color:#fff; height:51px; line-height:51px;}
+.house{ background-size:2px 51px; float:left; display:inline-block; width:42px; height:51px;}
+.house b{float:left; background:url(topicon.png) no-repeat 0 -27px; margin-top:5px; background-size:40px; display:inline-block; width:40px; height:40px;}
+.house s{float:left; background:url(house.png) no-repeat;margin-top:10px; background-size:35px; display:inline-block; width:35px; height:35px;}
+.right_house{ background-size:2px 51px; float:right; padding:5px 10px 0 12px;}
+.exit b { background:url(exit.png) no-repeat; background-size:20px 25px; width:20px; height:25px; display:inline-block;}
+/*-------------------------------------------------------------------banner------------------------------------------------------------*/
+.banner{position: relative; color:#333; height:200px; margin-top: 1px;}
+.banner div,.banner img{width:100%;}
+.banner h1{ font-size:20px; font-weight:100;}
+.banner h2{ font-size:16px; font-weight:100; padding:20px 0;}
+.banner h6{ font-family:Arial, Helvetica, sans-serif; font-size:10px; font-weight:100;}
+.banner input{ background:url(icon_06.png) no-repeat; background-size:90px 36px; color:#fff; padding-left:10px; border:none; height:36px; width:90px; font-weight:bold;}
+/*-------------------------------------------------------------------main------------------------------------------------------------*/
+#main{min-height:280px; margin:10px;}
+#main .main_left{ width:100%; float:left;}
+#main .main_left a{ padding:10px 0;text-align:center; width:100%; margin-bottom:5px; color:#333;border: 1px solid #DBDBDB; background:#fff;float:left;}
+#main .main_left a font,#main .main_contact font,#main .addkdiv font{ display:inline-block; font-size:16px; color:#333; padding:10px 0 0 0;}
+#main .main_left a span,#main .main_contact span,#main .addkdiv span{ display:inline-block; width:100%;}
+#main .main_left div{ width:49%; float:left; display:block;}
+#main .main_left div a:first-child{ float:left;}
+#main .product font{ margin-left:-10px; font-size:12px;}
+
+#main .product{text-align:center;}
+#main .product span{background:url(iconnav1.png) no-repeat center 0; height:55px;}
+
+
+#main .network span{background:url(iconnav1.png) no-repeat center -52px; height:55px; padding-left:10px;}
+
+
+#main .faq span{background:url(iconnav1.png) no-repeat center -110px; height:55px;}
+
+#main .apply span{background:url(iconnav1.png) no-repeat center -165px; height:55px;}
+
+#main .searchorder{ width:29%; float:right;text-align:center; padding:43px 0;}
+#main .searchorder span{ background:url(search_11.png) no-repeat center; display:block; height:55px;}
+
+#main .main_contact{ width:29%; float:right;text-align:center; padding:43px 0;}
+#main .main_contact span{ background:url(iconnav1.png) no-repeat center -220px; height:55px;}
+
+#main .addkdiv{ width:100%; float:left;}
+
+#main .search_zw span{ background:url(navicon1.png) no-repeat center -133px; height:55px;}
+
+
+#main .apply_th span{background:url(navicon1.png) no-repeat center -62px; height:55px;}
+
+#main .tuan_th{width: 29%;float: right;text-align: center;padding:10px 0;}
+#main .tuan_th span{background:url(navicon1.png) no-repeat center 0; height:55px;}
+/*-------------------------------------------------------------------footer------------------------------------------------------------*/
+footer{ background:#07a989; background-size:1px 51px; min-height:46px;  width:100%;margin-top: 10px;line-height: 20px;padding-top:5px;}
+footer p{ text-align:center; color:#fff; font-size:13px;}
+footer p a{ color:#fff;}
+footer p a:hover{color:#fff;}
+
+.yuaninpt{width:68%;float:left;}
+.ndiv p{width:30%; float:right;}
