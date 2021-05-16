@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
-<%@ Register src="end.ascx" tagname="end" tagprefix="uc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -23,15 +22,7 @@
 			<!--头部 开始-->
 			
 			<div class="header">
-				<a href="index.aspx" class="logo">AH礼券自助提货系统</a>
-					<span>
-	
-		<span class="phoneimg" style="padding-top:0;">
-			<a href="m/index.aspx" class="phone_a">手机网站</a>
-			<img src="image/api.png" id="phoneimg" style="display: none;">
-		</span>
-	
-	</span>
+				<a href="index.aspx" class="logo">江西理工大学提货系统</a>
 			</div>
 			
 			<!--头部end-->
@@ -64,11 +55,11 @@
 						</div>
 						<em class="embg"></em>
 					</li>
-					<li class="libg li4" onclick="window.location.href='helpList.aspx'" style="border: none; cursor: pointer;">
+					<li class="libg li4" onclick="window.location.href='product.aspx'" style="border: none; cursor: pointer;">
 						<strong class="nav4"></strong>
 						<div>
-							<a href="helpList.aspx" style="color: rgb(255, 255, 255);">帮助中心</a>
-							<span style="color: rgb(121, 135, 149);">Help center</span>
+							<a href="product.aspx" style="color: rgb(255, 255, 255);">产品中心</a>
+							<span style="color: rgb(121, 135, 149);">Product center</span>
 						</div>
 						<em class="embg"></em>
 					</li>
@@ -113,57 +104,8 @@
 			</div>
 			<!--banner end-->
 			<div class="clear"></div>
-			<!--nav 开始-->
-			<div class="navdiv">
-				<div class="navbgdiv">
-					<p><img src="image/navtop.jpg"></p>
-					<div>						
-						<a href="selseSite.aspx">
-							<img src="image/index_xswd.jpg">
-							<span>销售网点</span>
-						</a>
-					</div>
-					<p><img src="image/navbottom.jpg"></p>
-				</div>
-				<div class="navbgdiv">
-					<p><img src="image/navtop.jpg"></p>
-					<div>
-						
-							<a href="product.aspx">
-								<img src="image/product.jpg">
-								<span>产品中心</span>
-							</a>
-						
-						
-					</div>
-					<p><img src="image/navbottom.jpg"></p>
-				</div>
-				<div class="navbgdiv">
-					<p><img src="image/navtop.jpg"></p>
-					<div>
-						<a href="service.aspx" target="_blank">
 					
-							<img src="image/service.jpg">
-							<span>售后服务</span>
-						</a>						
-					</div>
-					<p><img src="image/navbottom.jpg"></p>
-				</div>
-				<div class="navbgdiv" style="padding:0;">
-					<p><img src="image/navtop.jpg"></p>
-					<div>
-						<a href="Contactus.aspx">
-							<img src="image/contact.jpg">
-							<span>联系客服</span>
-						</a>
-					</div>
-					<p><img src="image/navbottom.jpg"></p>
-				</div>
-			</div>
-			<div class="clear"></div>
-			<!--nav end-->			
 		</div>
-        <uc1:end ID="end1" runat="server" />
 <script language="javascript" type="text/javascript" src="image/jquery-1.9.1.js"></script>
 <script language="javascript" type="text/javascript" src="image/index.js"></script>
 <script type="text/javascript" src="image/jquery.artDialog.min.js"></script>

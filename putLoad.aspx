@@ -1,6 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="putLoad.aspx.cs" Inherits="putLoad" %>
-<%@ Register src="top.ascx" tagname="top" tagprefix="uc1" %>
-<%@ Register src="end.ascx" tagname="end" tagprefix="uc2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
@@ -22,7 +20,9 @@
 <body>
     <form id="form1" runat="server">
     <div id="main">
-        <uc1:top ID="top1" runat="server" />
+        <div class="header">
+			<a href="index.aspx" class="logo">江西理工大学提货系统</a>
+		</div>
     <div class="clear"></div>
 
 			
@@ -53,11 +53,11 @@
 						</div>
 						<em class="embg"></em>
 					</li>
-					<li class="libg li4" onclick="window.location.href='helpList.aspx'" style="border: none; cursor: pointer;">
+					<li class="libg li4" onclick="window.location.href='product.aspx'" style="border: none; cursor: pointer;">
 						<strong class="nav4"></strong>
 						<div>
-							<a href="helpList.aspx" style="color: rgb(255, 255, 255);">帮助中心</a>
-							<span style="color: rgb(121, 135, 149);">Help center</span>
+							<a href="product.aspx" style="color: rgb(255, 255, 255);">产品中心</a>
+							<span style="color: rgb(121, 135, 149);">Product center</span>
 						</div>
 						<em class="embg"></em>
 					</li>
@@ -77,39 +77,11 @@
 								<input type="text" id="ticketpw" name="ticketpw" value="" runat="server" maxlength="6" class="txtinput_search">
 							</span>
 							<span>
-								<font>验证码：</font>
-								<input type="text" ID="checkcode" name="checkcode" runat="server" class="txtinput_search" maxlength="4" style="width:100px;">
-					  			 <a href="javascript:;" onclick="ToggleCode(this, 'tools/verify_code.ashx');return false;"><img src="tools/verify_code.ashx"  alt="看不清楚?请点击刷新" width="100" height="38"  border="0" /> </a>
+							
                                  <asp:Button ID="btnSearch" runat="server" Text="" CssClass="searchbtn" onclick="btnSearch_Click"  OnClientClick="return tijiao();"/>
 							</span>
                             <asp:Panel ID="PanelOrder" runat="server" Visible="false">
-                   
-							<h8></h8>
-                             <span class="reds">
-								*可以一次提多张礼券一并发货
-							</span>
-      <table width="582" border="0" align="center" cellpadding="8" cellspacing="0" class="cart_table">
-      <tr>       
-      <th width="100" align="center">提货编码</th>
-        <th align="left">礼品名称</th>
-        <th width="50" align="center">操作</th>
-      </tr>
-  <asp:Repeater ID="rptList" runat="server">
-<ItemTemplate> 
-      <tr> 
-        <td><%# Eval("ticket_no")%></td>  
-        <td><%# GetTitle(Convert.ToInt32(Eval("id")))%></td>  
-        <td align="center"><asp:LinkButton ID="lbtnDelCa" runat="server" CommandArgument='<%# Eval("id")%>' OnClientClick="return confirm('是否真的要删除？')" onclick="lbtnDelCa_Click"><font color =red>[删除]</font></asp:LinkButton></td>
-      </tr>
-       </ItemTemplate>
-<FooterTemplate>
-  <%#rptList.Items.Count == 0 ? " <tr><td colspan=\"3\">暂无数据</td></tr>" : ""%>
-
-</FooterTemplate>
-</asp:Repeater> 
-        
-    	</table>
-        <h8></h8>
+      
 <script type="text/javascript">
             $(function () {
                 //初始化地区
@@ -135,14 +107,14 @@
                             <textarea ID="message" runat="server"  name="message"  class="textareaorder"></textarea></span> &nbsp;
                                 
                                 <span><asp:Button ID="btnSubmit" runat="server" Text="提交" 
-                                    CssClass="btnbg anniu"   OnClientClick="return questionord();" 
+                                    CssClass="btnbg anniu"  
                                     onclick="btnSubmit_Click"/>
 
 									<input type="button" value="重置" onclick="reset()" class="addpackage anniu" style="width:112px;">
 							</span>
                                 &nbsp;&nbsp;</asp:Panel>
 					
-					<p><img src="image/inttbottom20.jpg"></p>
+					<p style="position:relative;left:-9px"><img src="image/inttbottom20.jpg"></p>
 				</div>
 				
 				
@@ -150,7 +122,6 @@
 		</div>
  </div>
 		<!--main end-->
-    <uc2:end ID="end1" runat="server" />
    
 	
 		<script language="javascript" type="text/javascript" src="image/index.js"></script>

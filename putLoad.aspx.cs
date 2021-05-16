@@ -13,17 +13,12 @@ public partial class putLoad : System.Web.UI.Page
 
     protected void btnSearch_Click(object sender, EventArgs e)
     {
-        if (checkcode.Value.Trim().Equals("") || Session["SESSION_CODE"].ToString().Trim() != checkcode.Value.Trim())
-        {
-            this.ClientScript.RegisterStartupScript(this.GetType(), "1", "<script> $.alert(\"<div class='message'>验证码错误</div>\").time(5000);</script>");
-            checkcode.Value = "";
-            return;
-        }
+        
         ax_ticket model = new ax_ticket();
         if (model.Existsfb(ticketno.Value.Trim(), 3))
         {
             this.ClientScript.RegisterStartupScript(this.GetType(), "1", "<script> $.alert(\"<div class='message'>亲！您输入的提货编码提过货了！可以去查询订单查询订单信息了!</div>\").time(5000);</script>");
-            checkcode.Value = "";
+            
             return;
         }
         if (!model.Exists(ticketno.Value.Trim(), ticketpw.Value.Trim()))
@@ -42,64 +37,20 @@ public partial class putLoad : System.Web.UI.Page
             {
                 ShopCart.Add(model.GetID(ticketno.Value.Trim(), ticketpw.Value.Trim()), 1);
                 PanelOrder.Visible = true;
-                RptBind();
+               
             }    
         }
     }
-    // 单个删除
-    protected void lbtnDelCa_Click(object sender, EventArgs e)
-    {
-        // 当前点击的按钮
-        LinkButton lb = (LinkButton)sender;
-        int caId = int.Parse(lb.CommandArgument);
-        ShopCart.Clear(caId.ToString());
-        RptBind();
-    }
 
-    #region 数据绑定=================================
-    private void RptBind()
-    {
-        ShopCart bll = new ShopCart();
-        IList<cart_items> ls1 = bll.get_cart_list();
-        this.rptList.DataSource = ls1;
-        this.rptList.DataBind();
-        checkcode.Value = "";
-        ticketno.Value = "";
-        ticketpw.Value = "";
-    }
-    #endregion
+   
 
-    #region 返回礼品名称=============================
-    protected string GetTitle(int _id)
-    {
-        string _title = string.Empty;
-        ax_ticket myt = new ax_ticket();
-        myt.GetModel(_id);
-        _title = new ax_article().GetTitle(Convert.ToInt32(myt.pid));
-
-        return _title;
-    }
-    #endregion
+    
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
         //检查商品
         IList<cart_items> iList = ShopCart.GetList();
-        if (iList == null)
-        {
-            this.ClientScript.RegisterStartupScript(this.GetType(), "1", "<script> $.alert(\"<div class='message'>对不起！礼品列表为空不能提货！</div>\").time(5000);</script>");
-            return;
-        }
-        foreach (cart_items item in iList)
-        { 
-            ax_ticket myt = new ax_ticket();
-            myt.GetModel(item.id);
-            if (myt.status == 3)
-            {
-                this.ClientScript.RegisterStartupScript(this.GetType(), "1", "<script> $.alert(\"<div class='message'>对不起！您的礼券已经被领取不能重复领取！</div>\").time(5000);</script>");
-                return;
-            }
-        }
+        
         //保存订单=======================================================================
         ax_orders model = new ax_orders();
         model.order_no = Utils.GetOrderNumber(); //订单号

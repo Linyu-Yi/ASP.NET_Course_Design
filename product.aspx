@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="product.aspx.cs" Inherits="product" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
-<%@ Register src="top.ascx" tagname="top" tagprefix="uc1" %>
-<%@ Register src="end.ascx" tagname="end" tagprefix="uc2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -21,7 +19,9 @@
 <body>
     <form id="form1" runat="server">
    <div id="main">
-	 <uc1:top ID="top1" runat="server" />		
+	 <div class="header">
+				<a href="index.aspx" class="logo">江西理工大学提货系统</a>
+			</div>
 <div class="clear"></div>
 		<%--		<div class="clear"></div>
 		<div class="content">									 					 
@@ -65,7 +65,7 @@
 			</div>		
 			<div class="clear"></div>
 		</div>
-            <uc2:end ID="end1" runat="server" />
+            
             <script type="text/javascript" src="image/jquery-1.9.1.js" language="javascript"></script>
 		<script type="text/javascript" src="image/jquery.tabify.js" charset="utf-8"></script>
 		<script type="text/javascript" src="image/index.js" language="javascript"></script>

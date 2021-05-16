@@ -11,12 +11,7 @@ public partial class identityLoad : System.Web.UI.Page
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        if (checkcode.Value.Trim().Equals("") || Session["SESSION_CODE"].ToString().Trim() != checkcode.Value.Trim())
-        {
-            this.ClientScript.RegisterStartupScript(this.GetType(), "1", "<script> $.alert(\"<div class='message'>验证码错误</div>\").time(5000);</script>");
-            checkcode.Value = "";
-            return;
-        }
+       
         ax_ticket model = new ax_ticket();
         if (model.Existsfb(orderno.Value.Trim(),2))
         {
@@ -29,17 +24,17 @@ public partial class identityLoad : System.Web.UI.Page
             {
                 this.ClientScript.RegisterStartupScript(this.GetType(), "1", "<script> $.alert(\"<div class='message'>恭喜！您输入的提货编码是真的！可以去申请提货了，亲！</div>\").time(5000);</script>");
             }
-              checkcode.Value = "";
+              
         }
         else if (model.Existsfb(orderno.Value.Trim(), 3))
         {
             this.ClientScript.RegisterStartupScript(this.GetType(), "1", "<script> $.alert(\"<div class='message'>您输入的提货编码提过货了！可以去查询订单查询订单信息了，亲！</div>\").time(5000);</script>");
-            checkcode.Value = "";
+            
         }
         else
         {
             this.ClientScript.RegisterStartupScript(this.GetType(), "1", "<script> $.alert(\"<div class='message'>没有查到您输入的提货编码，请确认输入是否正确！</div>\").time(5000);</script>");
-            checkcode.Value = "";
+            
         }
     }
 }

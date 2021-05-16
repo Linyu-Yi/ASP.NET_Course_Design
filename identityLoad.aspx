@@ -1,6 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="identityLoad.aspx.cs" Inherits="identityLoad" %>
-<%@ Register src="top.ascx" tagname="top" tagprefix="uc1" %>
-<%@ Register src="end.ascx" tagname="end" tagprefix="uc2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
@@ -20,7 +18,9 @@
 <body>
     <form id="form1" runat="server">
     <div id="main">
-        <uc1:top ID="top1" runat="server" />
+        <div class="header">
+			<a href="index.aspx" class="logo">江西理工大学提货系统</a>
+		</div>
     <div class="clear"></div>	
 <div class="left">
 				<p><img src="image/lefttop.jpg"></p>
@@ -49,11 +49,11 @@
 						</div>
 						<em class="embg"></em>
 					</li>
-					<li class="libg li4" onclick="window.location.href='helpList.aspx'" style="border: none; cursor: pointer;">
+					<li class="libg li4" onclick="window.location.href='product.aspx'" style="border: none; cursor: pointer;">
 						<strong class="nav4"></strong>
 						<div>
-							<a href="helpList.aspx" style="color: rgb(255, 255, 255);">帮助中心</a>
-							<span style="color: rgb(121, 135, 149);">Help center</span>
+							<a href="product.aspx" style="color: rgb(255, 255, 255);">产品中心</a>
+							<span style="color: rgb(121, 135, 149);">Product center</span>
 						</div>
 						<em class="embg"></em>
 					</li>
@@ -70,9 +70,7 @@
 							<span><font>提货编码：</font><input type="text" id="orderno"  runat="server" maxlength="8" name="orderno" value=""  class="txtinput_search"></span>
 							
 							<span>
-								<font>验证码：</font>
-								<input type="text" ID="checkcode" name="checkcode" runat="server" class="txtinput_search" maxlength="4" style="width:100px;">
-					  			 <a href="javascript:;" onclick="ToggleCode(this, 'tools/verify_code.ashx');return false;"><img src="tools/verify_code.ashx"  alt="看不清楚?请点击刷新" width="100" height="38"  border="0" /> </a>
+								
                                  <asp:Button ID="btnSubmit" runat="server" Text="" CssClass="searchbtn" onclick="btnSubmit_Click"  OnClientClick="return tijiao();"/>
 
 							</span>
@@ -85,7 +83,6 @@
 			</div>
 		</div>
 		<!--main end-->
-    <uc2:end ID="end1" runat="server" />
     
 		<script language="javascript" type="text/javascript" src="image/jquery-1.9.1.js"></script>
 		<script language="javascript" type="text/javascript" src="image/index.js"></script>
