@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="top.ascx.cs" Inherits="top" %>
 <div class="header">
-	<a href="index.aspx" class="logo">AH礼券自助提货系统</a>
+	<a href="index.aspx" class="logo">江西理工大学提货系统</a>
 	<span>
 		<a href="index.aspx" class="black_index">回到首页</a>
 		<span class="phoneimg" style="padding-top:0;">

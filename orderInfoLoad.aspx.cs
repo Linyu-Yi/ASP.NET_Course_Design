@@ -59,7 +59,4 @@ public partial class orderInfoLoad : System.Web.UI.Page
         this.rptList.DataBind();
     }
     #endregion
-
-    
-
 }

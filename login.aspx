@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>欢迎登录AH礼券提货系统-后台登录</title>
+    <title>欢迎登录江西理工大学提货系统-后台登录</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery/jquery-1.10.2.min.js"></script>
 <script src="js/cloud.js" type="text/javascript"></script>
