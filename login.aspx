@@ -47,7 +47,7 @@
 </div>  
 
 <div class="logintop">    
-    <span>欢迎登录AH礼券提货系统</span>  
+    <span>欢迎登录江西理工大学提货系统</span>  
 </div>
     
 <div class="loginbody"> 
@@ -60,7 +60,7 @@
     </ul>  
     </div>   
     </div>   
-<div class="loginbm">版权所有 &copy;  All Rights Reserved. 宁波市AH水产有限公司 &nbsp;&nbsp;&nbsp;&nbsp;技术支持：<a href="http://www.olshine.com" target="_blank">奥祥科技</a></div>
+<div class="loginbm">版权所有 &copy;  All Rights Reserved. CZQ网络技术有限公司 &nbsp;&nbsp;&nbsp;&nbsp;技术支持：<a href="http://www.olshine.com" target="_blank">CZQ科技</a></div>
     </form>
 </body>
 </html>
